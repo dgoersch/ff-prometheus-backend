@@ -79,7 +79,7 @@ for my $community (@{$cfg->{mysects}}) {
         if( $json->{nodes}->{$node}->{statistics}->{traffic}->{rx}->{bytes} && $json->{nodes}->{$node}->{statistics}->{traffic}->{tx}->{bytes} && $json->{nodes}->{$node}->{statistics}->{traffic}->{forward}->{bytes} ) {
             print $trafficnodes "ffnode_".$json->{nodes}->{$node}->{nodeinfo}->{node_id}."_traffic ".( $json->{nodes}->{$node}->{statistics}->{traffic}->{rx}->{bytes} + $json->{nodes}->{$node}->{statistics}->{traffic}->{tx}->{bytes} + $json->{nodes}->{$node}->{statistics}->{traffic}->{forward}->{bytes} )."\n";
         } else {
-            print $trafficnodes "ffnode_".$json->{nodes}->{$node}->{nodeinfo}->{node_id}."_traffic 0\n";
+        #    print $trafficnodes "ffnode_".$json->{nodes}->{$node}->{nodeinfo}->{node_id}."_traffic 0\n";
         }
 
         # write load each node if in json
